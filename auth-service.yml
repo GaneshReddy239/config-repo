@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: auth-service
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
 
 eureka:
   client:
@@ -23,3 +28,4 @@ management:
 jwt:
  secret: fs6JcyUKoBqxF35QXDBGA0MXgu5Y70jvr14wgDu88Ua
  expiration: 600000
+
