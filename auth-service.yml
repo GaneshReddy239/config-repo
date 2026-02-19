@@ -43,6 +43,4 @@ management:
     health:
       show-details: always
 
-jwt:
-  secret: fs6JcyUKoBqxF35QXDBGA0MXgu5Y70jvr14wgDu88Ua
-  expiration: 600000
+
