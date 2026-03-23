@@ -30,9 +30,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 0
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 2
+                redis-rate-limiter.burstCapacity: 2
+                redis-rate-limiter.requestedTokens: 2
                 key-resolver: "#{@userKeyResolver}"
 
         - id: product-service
