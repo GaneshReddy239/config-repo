@@ -42,3 +42,27 @@ management:
   endpoint:
     health:
       show-details: always
+resilience4j:
+  circuitbreaker:
+    instances:
+
+      inventory:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+
+        recordExceptions:
+          - feign.FeignException
+          - java.io.IOException
+
+        ignoreExceptions:
+          - com.example.inventory.Exception.OutOfStockException
+          - com.example.inventory.Exception.InventoryNotFoundException
+          - com.example.inventory.Exception.InventoryExistsException
+          - com.example.inventory.Exception.ReservationNotFoundException
