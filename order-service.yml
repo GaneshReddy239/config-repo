@@ -60,7 +60,7 @@ resilience4j:
         recordExceptions:
           - feign.FeignException
           - java.io.IOException
-          - org.springframework.cloud.client.loadbalancer.LoadBalancerClientException
+          
 
         ignoreExceptions:
           - com.ganesh.order_service.Exception.OutOfStockExceprion
