@@ -62,7 +62,5 @@ resilience4j:
           - java.io.IOException
 
         ignoreExceptions:
-          - com.example.inventory.Exception.OutOfStockException
-          - com.example.inventory.Exception.InventoryNotFoundException
-          - com.example.inventory.Exception.InventoryExistsException
-          - com.example.inventory.Exception.ReservationNotFoundException
+          - com.ganesh.order_service.Exception.OutOfStockExceprion
+          
